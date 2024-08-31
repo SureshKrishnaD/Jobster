@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+input,
+textarea,
+button,
+select {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+a {
+    color: white;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+.createimg {
+    height: 95vh;
+    position: fixed;
+}
+
+.blurcon {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.22);
+    background: rgba(0, 0, 0, 0.49);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: fixed;
+}
+
+.backbtn {
+    margin: 1.5em;
+
+}
+
+.question1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 1.5em;
+    min-width: 40%;
+    margin: 1em;
+    word-wrap: break-word;
+    text-align: center;
+    font-weight: 500;
+}
+
+.Hirerhome {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+nav img {
+    margin: 1em;
+}
+
+.Hirerinfocon {
+    display: flex;
+    align-items: center;
+}
+
+.Hirerinfo {
+    min-width: 40%;
+    margin: 1em;
+    word-wrap: break-word;
+}
+
+.Hirerinfo p {
+    text-wrap: wrap;
+}
+
+.Hirerprofile {
+    width: 85vw;
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.Hirerprofile img {
+    width: 4em;
+    margin: 0em 0em 0em 1em;
+}
+
+.Hirerbtn {
+    display: flex;
+    justify-content: center;
+}
+
+.Hirerbtn p {
+    padding: 0.5em 3em;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+    margin: 1em 0.5em 0em 0.5em;
+    border-radius: 30px;
+    display: grid;
+    place-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+}
+
+ul {
+    background-color: red;
+}
+
+.addproject {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    padding: 0.5em 0.8em;
+    background-color: white;
+    border-radius: 50px;
+    font-family: monospace;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.addprojectconout {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.21);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.9px);
+    -webkit-backdrop-filter: blur(11.9px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadein 0.5s ease-out forwards;
+    z-index: 15;
+}
+
+.addprojectconinner {
+    margin: 2em;
+    padding: 1em 1em;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border-radius: 10px;
+
+}
+
+.addprojectinp {
+    margin: 0.2em 0;
+    min-width: 70vw;
+    padding: 0.7em 1em;
+    outline: none;
+    border: solid 1px #828282;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffffff;
+    font-weight: 500;
+}
+
+.addprojectinpdecription {
+    min-height: 4em;
+    resize: none;
+}
+
+.addprojectinpdate {
+    color: #717171;
+}

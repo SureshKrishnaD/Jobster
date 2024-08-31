@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+input,
+textarea,
+button,
+select {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+a,
+Link {
+    color: rgb(255, 255, 255);
+}
+
+body {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.welcomecon {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 11;
+    background: rgba(87, 86, 86, 0.245);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.1px);
+    -webkit-backdrop-filter: blur(13.1px);
+    display: grid;
+    place-items: center;
+}
+
+.welcomeinner {
+    margin: 2em;
+    padding: 0.5em 1.5em;
+    background-color: #ffffff;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+}
+
+.welcomeinner img {
+    width: 7em;
+    margin: 0;
+}
+
+.completeprofile {
+    text-align: center;
+    text-wrap: wrap;
+    font-weight: 500;
+}
+
+.completeprofilecon {
+    margin: 1em 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.completeprofilenext {
+    color: black;
+    font-weight: 500;
+}
+
+.completeprofileskip {
+    font-weight: 400;
+    color: #646464;
+}
+
+.seprationline {
+    padding: 1em 0.7px;
+    background-color: rgb(208, 137, 238);
+}
+
+.freehomecon {
+    height: 100vh;
+    overflow: scroll;
+}
+
+.freehometop {
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    padding-bottom: 1em;
+    z-index: 10;
+}
+
+.freehometop img {
+    cursor: pointer;
+}
+
+.freehomenav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.freehomenav img {
+    height: 1.3em;
+}
+
+.freehomenav .logo {
+    height: 2em;
+    margin-right: auto;
+}
+
+.freehomenav .dp {
+    height: 1.8em;
+    aspect-ratio: 1/1;
+}
+
+.domincon {
+    display: flex;
+    overflow: scroll;
+    margin: 0em 0.5em;
+    white-space: nowrap;
+    background-color: black;
+}
+
+.domincon li {
+    font-size: small;
+    list-style: none;
+    padding: 0.5em 1em;
+    background-color: #393939ba;
+    margin: 0 0.5em;
+    border-radius: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.projectscon {
+    padding: 1em 0;
+    padding-top: 0.5em;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ex {
+    width: 87vw;
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.projectbg {
+    width: 40%;
+    margin-right: 1em;
+    opacity: 0.6;
+    max-height: 4.5em;
+    min-height: 3.8em;
+    max-width: 6em;
+}
+
+.projecttopic {
+    font-weight: 500;
+}
+
+.projectdescription {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: small;
+    text-wrap: wrap;
+    color: #4f4f4f;
+}
+
+.projectdeadline {
+    font-weight: 500;
+    font-size: xx-small;
+    color: #848383;
+    margin-top: 0.2em;
+}
+
+.userprofilecon {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to top, #000000, rgb(93, 93, 93));
+    overflow: scroll;
+}
+
+.userprofilenav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.userprofilenav img {
+    cursor: pointer;
+}
+
+.profilecard {
+    padding: 1em;
+    background: linear-gradient(to left, plum, #fff6fc);
+    margin: 0.5em 1em;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.userdp {
+    width: 4em;
+    margin: 1em;
+}
+
+.userinfo {
+    margin: 0.5em;
+
+}
+
+.userinfo p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.usercardoptions {
+    display: flex;
+    gap: 0.5em;
+    position: absolute;
+    bottom: 0.8em;
+    right: 1em;
+    font-size: 0.8em;
+    display: grid;
+    place-items: center;
+    background-color: #ffffff;
+    padding: 0.5em;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.viewprofileouter {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.21);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.9px);
+    -webkit-backdrop-filter: blur(11.9px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadein 0.5s ease-out forwards;
+    z-index: 15;
+}
+
+.viewprofileinner {
+    margin: 2em;
+    padding: 1em 0;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.viewuserdp {
+    width: 5em;
+    margin-bottom: 1em;
+}
+
+.viewusername {
+    margin: 1em 0;
+}
+
+.viewinfo {
+    font-weight: 500;
+    width: 80%;
+    text-wrap: wrap;
+    font-size: smaller;
+    margin: 0.5em 1em;
+    padding: 1em;
+    outline: solid 1px #acacac;
+    border-radius: 7px;
+    min-width: 80vw;
+}
+
+.viewoptioncon {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8em;
+
+}
+
+.viewopbtn {
+    width: 4em;
+    padding: 0.5em;
+    border-radius: 30px;
+    background-color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.editable {
+    color: blue;
+}
+
+.viewprofileuseroptionsconout {
+    margin: 0.7em 1em;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 1em;
+    z-index: 10;
+}
+
+.viewprofileuseroptionscon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #00000032, #00000093);
+    border-radius: 30px;
+    padding: 0.5em 0.3em;
+}
+
+.viewprofileuseroptions {
+    color: #ffffff;
+    border-radius: 30px;
+    font-weight: 500;
+    padding: 0.4em 1.2em;
+    /* background-color: #ffffff; */
+    margin: 0 0.4em;
+    display: grid;
+    place-items: center;
+    /* outline: 1px dotted white; */
+    /* background-color: #ffffff; */
+}
+
+.bellop {
+    padding: 0.5em;
+    background-color: #00000071;
+    outline: none;
+}
+
+.userprofileprojects {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+}
