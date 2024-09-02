@@ -4,6 +4,8 @@ import intro from './assets/intro.mp4';
 import logo from './assets/Jobster.svg';
 import './App.css';
 
+const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
 export default function Intro() {
     const [showUsertype, setShowUsertype] = useState(false);
     const [selectedUsertype, setSelectedUsertype] = useState("");
@@ -11,7 +13,7 @@ export default function Intro() {
     const [selectedOpportunities, setSelectedOpportunities] = useState([]);
     const navigate = useNavigate();
     
-    const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
     
     useEffect(() => {
         const timer = setTimeout(() => {
