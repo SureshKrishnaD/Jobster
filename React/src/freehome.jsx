@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './freelancer.css';
-import logo from './assets/jobster.svg';
+// import logo from './assets/jobster.svg';
 import search from './assets/search.svg';
 import dp from './assets/dp.svg';
 import reactbg from './assets/reactbg.svg';
