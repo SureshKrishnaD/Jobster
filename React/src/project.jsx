@@ -4,12 +4,14 @@ import './project.css';
 import exampleimg from './assets/image1.jpg';
 import celebrateemoji from './assets/celebrate.svg'; // Make sure to import your celebration emoji
 
+const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
 const ProjectDetails = () => {
     const { projectid } = useParams();
     const [project, setProject] = useState(null);
     const [orderPlaced, setOrderPlaced] = useState(false); // State to track order placement success
 
-     const API_URL = process.env.REACT_APP_FRONTEND_URL;
+     
 
     
     useEffect(() => {
@@ -53,7 +55,7 @@ const ProjectDetails = () => {
         }
 
         try {
-            const response = await fetch('${API_URL}/api/orders', {
+            const response = await fetch(`${API_URL}/api/orders`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
