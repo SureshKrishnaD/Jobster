@@ -10,7 +10,9 @@ export default function Intro() {
     const [showFreeinfo, setShowFreeinfo] = useState(false);
     const [selectedOpportunities, setSelectedOpportunities] = useState([]);
     const navigate = useNavigate();
-
+    
+    const API_URL = process.env.REACT_APP_FRONTEND_URL;
+    
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowUsertype(true);
@@ -39,7 +41,7 @@ export default function Intro() {
 
     function intronav(action) {
         if (action === 1 || selectedOpportunities.length > 0) {
-            fetch('http://localhost:1234/api/update-opportunities', {
+            fetch('${API_URL}/api/update-opportunities', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
