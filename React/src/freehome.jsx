@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './freelancer.css';
-import logo from 'src/assets/jobster.svg';
-import search from 'src/assets/search.svg';
-import dp from 'src/assets/dp.svg';
-import reactbg from 'src/assets/reactbg.svg';
-import htmlbg from 'src/assets/htmlbg.svg';
-import flutterbg from 'src/assets/flutterbg.svg';
-import figmabg from 'src/assets/figmabg.svg';
-import pythonbg from 'src/assets/pythonbg.svg';
-import defaultbg from 'src/assets/defaultbg.svg';
-import celebrateemoji from 'src/assets/celebrate.svg';
+import logo from './assets/jobster.svg';
+import search from './assets/search.svg';
+import dp from './assets/dp.svg';
+import reactbg from './assets/reactbg.svg';
+import htmlbg from './assets/htmlbg.svg';
+import flutterbg from './assets/flutterbg.svg';
+import figmabg from './assets/figmabg.svg';
+import pythonbg from './assets/pythonbg.svg';
+import defaultbg from './assets/defaultbg.svg';
+import celebrateemoji from './assets/celebrate.svg';
 
 const API_URL = process.env.REACT_APP_FRONTEND_URL;
 
