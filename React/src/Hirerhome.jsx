@@ -13,6 +13,8 @@ import figmabg from './assets/figmabg.svg';
 import pythonbg from './assets/pythonbg.svg';
 import defaultbg from './assets/defaultbg.svg';
 
+const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
 export default function Profile() {
     const [addProject, setAddProject] = useState(false);
     const [title, setTitle] = useState('');
@@ -36,7 +38,7 @@ export default function Profile() {
 
     const [view, setView] = useState(false);
     const [isEditable, setIsEditable] = useState(false);
-    const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
     
     const fetchProjects = async () => {
         try {
@@ -96,7 +98,7 @@ export default function Profile() {
         };
         console.log(newProject);
         try {
-            const response = await fetch('${API_URL}/api/addproject', {
+            const response = await fetch(`${API_URL}/api/addproject`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
