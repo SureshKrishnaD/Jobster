@@ -6,6 +6,8 @@ import { FaRegBell } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
+const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
 export default function Profile() {
     const navigate = useNavigate();
     const username = localStorage.getItem('name') || "userexample";
@@ -15,7 +17,7 @@ export default function Profile() {
     const [view, setView] = useState(false);
     const [isEditable, setIsEditable] = useState(false);
     
-    const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
     
     const logout = () => {
         localStorage.removeItem('name');
@@ -33,7 +35,7 @@ export default function Profile() {
         };
 
         try {
-            const response = await fetch('${API_URL}/api/updateemployee', {
+            const response = await fetch(`${API_URL}/api/updateemployee`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
