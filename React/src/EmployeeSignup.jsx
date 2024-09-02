@@ -4,6 +4,9 @@ import logo from './assets/Jobster.svg';
 import create from './assets/create.svg';
 import './App.css';
 
+const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
+
 export default function Signup() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -16,7 +19,7 @@ export default function Signup() {
         setError(''); // Clear previous errors
 
         try {
-            const response = await fetch('http://localhost:1234/api/employeesignup', {
+            const response = await fetch(`${API_URL}/api/employeesignup`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
