@@ -4,6 +4,9 @@ import logo from './assets/Jobster.svg';
 import create from './assets/create.svg';
 import './App.css';
 
+const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
+
 export default function Login() {
     const [email, setEmail] = useState('');
     const [pass, setPassword] = useState('');
@@ -17,7 +20,7 @@ export default function Login() {
 
         try {
             
-            const response = await fetch(`http://localhost:1234/api/employeelogin`, {
+            const response = await fetch(`${API_URL}/api/employeelogin`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
