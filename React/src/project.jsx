@@ -9,10 +9,13 @@ const ProjectDetails = () => {
     const [project, setProject] = useState(null);
     const [orderPlaced, setOrderPlaced] = useState(false); // State to track order placement success
 
+     const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
+    
     useEffect(() => {
         const fetchProject = async () => {
             try {
-                const response = await fetch(`http://localhost:1234/api/projects/${projectid}`);
+                const response = await fetch(`${API_URL}/api/projects/${projectid}`);
                 const contentType = response.headers.get("content-type");
 
                 console.log('Response Status:', response.status);
@@ -50,7 +53,7 @@ const ProjectDetails = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:1234/api/orders', {
+            const response = await fetch('${API_URL}/api/orders', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
