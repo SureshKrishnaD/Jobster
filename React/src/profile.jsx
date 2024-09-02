@@ -14,7 +14,9 @@ export default function Profile() {
     const [appliedProjects, setAppliedProjects] = useState([]);
     const [view, setView] = useState(false);
     const [isEditable, setIsEditable] = useState(false);
-
+    
+    const API_URL = process.env.REACT_APP_FRONTEND_URL;
+    
     const logout = () => {
         localStorage.removeItem('name');
         localStorage.removeItem('mail');
@@ -31,7 +33,7 @@ export default function Profile() {
         };
 
         try {
-            const response = await fetch('http://localhost:1234/api/updateemployee', {
+            const response = await fetch('${API_URL}/api/updateemployee', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,7 +53,7 @@ export default function Profile() {
 
     const fetchAppliedProjects = async () => {
         try {
-            const response = await fetch(`http://localhost:1234/api/fetchapplied?email=${encodeURIComponent(email)}`, {
+            const response = await fetch(`${API_URL}/api/fetchapplied?email=${encodeURIComponent(email)}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
