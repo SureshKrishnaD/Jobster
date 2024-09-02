@@ -36,11 +36,12 @@ export default function Profile() {
 
     const [view, setView] = useState(false);
     const [isEditable, setIsEditable] = useState(false);
-
+    const API_URL = process.env.REACT_APP_FRONTEND_URL;
+    
     const fetchProjects = async () => {
         try {
             const email = localStorage.getItem('email'); // Get the email from localStorage
-            const response = await fetch(`http://localhost:1234/api/projects?email=${encodeURIComponent(email)}`);
+            const response = await fetch(`${API_URL}/api/projects?email=${encodeURIComponent(email)}`);
             const data = await response.json();
             console.log('Fetched Projects:', data);
             if (response.ok) {
@@ -95,7 +96,7 @@ export default function Profile() {
         };
         console.log(newProject);
         try {
-            const response = await fetch('http://localhost:1234/api/addproject', {
+            const response = await fetch('${API_URL}/api/addproject', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
