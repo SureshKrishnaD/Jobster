@@ -4,6 +4,8 @@ import logo from './assets/Jobster.svg';
 import create from './assets/create.svg';
 import './App.css';
 
+const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
 export default function Signup() {
     const [username, setUserName] = useState('');
     const [email, setEmail] = useState('');
@@ -14,9 +16,10 @@ export default function Signup() {
     const handleSignup = async (e) => { // Renamed from handleLogin to handleSignup
         e.preventDefault();
         setError(''); // Clear previous errors
-
+    
+        
         try {
-            const response = await fetch('http://localhost:1234/api/hirersignup', {
+            const response = await fetch(`${API_URL}/api/hirersignup`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
