@@ -21,10 +21,14 @@ export default function Freelancer() {
     const showLoggedIn = localStorage.getItem('loggedin');
     const email = localStorage.getItem('mail');
 
+    const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
+
+    
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await fetch('http://localhost:1234/api/allprojects');
+                const response = await fetch('${API_URL}/api/allprojects');
                 const data = await response.json();
                 setProjects(data);
             } catch (error) {
@@ -71,7 +75,7 @@ export default function Freelancer() {
         try {
             const email = localStorage.getItem('email'); // Get the email from localStorage
     
-            const response = await fetch(`http://localhost:1234/api/fetchapplied?email=${encodeURIComponent(email)}`);
+            const response = await fetch(`${API_URL}/api/fetchapplied?email=${encodeURIComponent(email)}`);
             const data = await response.json();
     
             console.log('Fetched Applied Projects:', data);
