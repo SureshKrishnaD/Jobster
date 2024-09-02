@@ -12,6 +12,8 @@ import pythonbg from 'src/assets/pythonbg.svg';
 import defaultbg from 'src/assets/defaultbg.svg';
 import celebrateemoji from 'src/assets/celebrate.svg';
 
+const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
 export default function Freelancer() {
     const [filter, setFilter] = useState('All');
     const [showwelcome, setShowWelcome] = useState(true);
@@ -21,14 +23,14 @@ export default function Freelancer() {
     const showLoggedIn = localStorage.getItem('loggedin');
     const email = localStorage.getItem('mail');
 
-    const API_URL = process.env.REACT_APP_FRONTEND_URL;
+
 
 
     
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await fetch('${API_URL}/api/allprojects');
+                const response = await fetch(`${API_URL}/api/allprojects`);
                 const data = await response.json();
                 setProjects(data);
             } catch (error) {
