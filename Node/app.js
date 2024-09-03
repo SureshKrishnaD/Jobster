@@ -19,8 +19,15 @@ const Routes = require('../Routes/Routes');
 
 const app = express();
 
-// Enable CORS for all routes
-app.use(cors());
+// CORS configuration
+const corsOptions = {
+  origin: 'https://jobster-client.vercel.app', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],  
+  credentials: true,  
+};
+
+// Enable CORS with specified options
+app.use(cors(corsOptions));
   
 
 //connecting database
