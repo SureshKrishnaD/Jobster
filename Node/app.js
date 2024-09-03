@@ -20,10 +20,7 @@ const Routes = require('../Routes/Routes');
 const app = express();
 
 // Enable CORS for all routes
-app.use(cors({
-    origin: 'https://jobster-server-psi.vercel.app',  
-    credentials: true,
-  }));
+app.use(cors());
   
 
 //connecting database
