@@ -21,7 +21,7 @@ const app = express();
 
 // Enable CORS for all routes
 app.use(cors({
-    origin: 'https://jobster-f.vercel.app',  
+    origin: 'https://jobster-server-psi.vercel.app',  
     credentials: true,
   }));
   
