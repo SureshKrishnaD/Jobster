@@ -20,7 +20,7 @@ export default function Login() {
 
         try {
             
-            const response = await fetch(`${API_URL}/api/hirerlogin`, {
+            const response = await fetch(`${API_URL}/undefined/api/hirerlogin`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
